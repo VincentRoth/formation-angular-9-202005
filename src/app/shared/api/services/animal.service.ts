@@ -21,6 +21,12 @@ export class AnimalService {
         veterinarian: 'Panoramix',
         comment: '123 test comment bis',
       },
+      {
+        name: 'Test3',
+        species: 'dog',
+        veterinarian: 'Panoramix',
+        comment: '123 test comment bis',
+      },
     ];
   }
 

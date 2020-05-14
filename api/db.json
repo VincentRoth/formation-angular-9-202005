@@ -27,6 +27,13 @@
       "veterinarian": "Ged Épervier",
       "comment": "un commentaire",
       "id": 4
+    },
+    {
+      "name": "Freya",
+      "species": "cat",
+      "veterinarian": "Ged Épervier",
+      "comment": null,
+      "id": 5
     }
   ],
   "veterinarians": [

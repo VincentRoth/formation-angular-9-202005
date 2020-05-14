@@ -1,20 +1,40 @@
-<form (ngSubmit)="onSubmit()">
+<form #animalForm="ngForm" (ngSubmit)="onSubmit()">
   <label>Nom :</label>
-  <input type="text" name="name" [(ngModel)]="model.name" />
+  <input
+    type="text"
+    name="name"
+    [(ngModel)]="model.name"
+    #name="ngModel"
+    required
+  />
+  <p *ngIf="name.errors?.required">Ce champs est requis.</p>
 
   <br />
 
   <label>Espèce :</label>
-  <input type="text" name="species" [(ngModel)]="model.species" />
+  <input
+    type="text"
+    name="species"
+    [(ngModel)]="model.species"
+    #species="ngModel"
+    required
+  />
+  <p *ngIf="species.errors?.required">Ce champs est requis.</p>
 
   <br />
 
   <label>Vétérinaire :</label>
-  <select name="veterinarian" [(ngModel)]="model.veterinarian">
+  <select
+    name="veterinarian"
+    [(ngModel)]="model.veterinarian"
+    #vet="ngModel"
+    required
+  >
     <option *ngFor="let vet of vets" [value]="getVetName(vet)">
       {{ getVetName(vet) }}
     </option>
   </select>
+  <p *ngIf="vet.errors?.required">Ce champs est requis.</p>
 
   <br />
 
@@ -23,5 +43,5 @@
 
   <br />
 
-  <button type="submit">Envoyer</button>
+  <button type="submit" [disabled]="animalForm.form.invalid">Envoyer</button>
 </form>

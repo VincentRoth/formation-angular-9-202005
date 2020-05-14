@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let vet of vets">
+    <a [routerLink]="[vet.id]">{{ vet.firstName }} {{ vet.lastName }}</a>
+  </li>
+</ul>

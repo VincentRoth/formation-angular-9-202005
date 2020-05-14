@@ -7,6 +7,13 @@ const routes: Routes = [
     redirectTo: 'animals',
     pathMatch: 'full',
   },
+  {
+    path: 'veterinarians',
+    loadChildren: () =>
+      import('./veterinarian/veterinarian.module').then(
+        (tsModule) => tsModule.VeterinarianModule
+      ),
+  },
 ];
 
 @NgModule({

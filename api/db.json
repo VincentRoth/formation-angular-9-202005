@@ -46,6 +46,11 @@
       "id": 2,
       "firstName": "Ged",
       "lastName": "Épervier"
+    },
+    {
+      "firstName": "Baltazar",
+      "lastName": "Dupont",
+      "id": 3
     }
   ]
 }

@@ -4,6 +4,7 @@ import { AnimalListComponent } from './animal-list/animal-list.component';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { AnimalRootComponent } from './animal-root/animal-root.component';
 import { AnimalDetailResolverService } from './animal-detail-resolver.service';
+import { AnimalFormComponent } from './animal-form/animal-form.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,17 @@ const routes: Routes = [
       {
         path: '',
         component: AnimalListComponent,
+      },
+      {
+        path: 'new',
+        component: AnimalFormComponent,
+      },
+      {
+        path: 'edit/:id',
+        component: AnimalFormComponent,
+        resolve: {
+          animal: AnimalDetailResolverService,
+        },
       },
       {
         path: ':id',

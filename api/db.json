@@ -20,6 +20,13 @@
       "species": "fox-squirrel",
       "veterinarian": "Ged Épervier",
       "comment": "Très agité."
+    },
+    {
+      "name": "Luna",
+      "species": "cat",
+      "veterinarian": "Ged Épervier",
+      "comment": "un commentaire",
+      "id": 4
     }
   ],
   "veterinarians": [

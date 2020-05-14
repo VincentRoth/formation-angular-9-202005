@@ -1,4 +1,5 @@
 <a appUppercase [routerLink]="[model.id]">{{ model.name }}</a> -
 {{ model.species }} -
 {{ model.comment | truncate: 10 }}
+<a [routerLink]="['edit', model.id]">Modifier</a>
 <button (click)="onItemDelete()">Delete</button>

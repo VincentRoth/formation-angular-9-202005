@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit()">
+  <label>Nom :</label>
+  <input type="text" name="name" [(ngModel)]="model.name" />
+
+  <br />
+
+  <label>Espèce :</label>
+  <input type="text" name="species" [(ngModel)]="model.species" />
+
+  <br />
+
+  <label>Vétérinaire :</label>
+  <select name="veterinarian" [(ngModel)]="model.veterinarian">
+    <option *ngFor="let vet of vets" [value]="getVetName(vet)">
+      {{ getVetName(vet) }}
+    </option>
+  </select>
+
+  <br />
+
+  <label>Commentaire :</label>
+  <textarea name="comment" [(ngModel)]="model.comment"></textarea>
+
+  <br />
+
+  <button type="submit">Envoyer</button>
+</form>

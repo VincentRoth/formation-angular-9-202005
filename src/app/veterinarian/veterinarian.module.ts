@@ -7,6 +7,7 @@ import { VetDetailComponent } from './vet-detail/vet-detail.component';
 import { VetListComponent } from './vet-list/vet-list.component';
 import { VetFormComponent } from './vet-form/vet-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     VetListComponent,
     VetFormComponent,
   ],
-  imports: [CommonModule, VeterinarianRoutingModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    VeterinarianRoutingModule,
+    ReactiveFormsModule,
+    TranslateModule,
+  ],
 })
 export class VeterinarianModule {}

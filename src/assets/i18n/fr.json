@@ -1,0 +1,17 @@
+{
+  "animal": {
+    "actions": {
+      "consult": "Consulter",
+      "edit": "Modifier",
+      "delete": "Supprimer"
+    },
+    "species": {
+      "cat": "Chat",
+      "dog": "Chien",
+      "fox-squirrel": "Écureuil renard"
+    }
+  },
+  "veterinarian": {
+    "title": "Vétérinaires"
+  }
+}

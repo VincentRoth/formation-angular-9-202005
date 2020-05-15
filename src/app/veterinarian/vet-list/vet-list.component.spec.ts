@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VetListComponent } from './vet-list.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { VeterinarianService } from '../../shared/api/services/veterinarian.service';
 
 describe('VetListComponent', () => {
   let component: VetListComponent;
@@ -8,9 +11,10 @@ describe('VetListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VetListComponent ]
-    })
-    .compileComponents();
+      declarations: [VetListComponent],
+      imports: [HttpClientTestingModule, RouterTestingModule],
+      providers: [VeterinarianService],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
